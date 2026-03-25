@@ -572,6 +572,103 @@ img { max-width: 100%; height: auto; display: block; }
 .conversion-sketch:hover img { filter: brightness(1) grayscale(0%); }
 
 /* ══════════════════════════════════════════
+   MUGDOCK BAR — horizontal heritage strip
+   ══════════════════════════════════════════ */
+.mugdock-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3rem 0;
+    margin-top: 3.5rem;
+    border-top: 1px solid rgba(255,255,255,0.09);
+}
+
+.mbar-crest {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.mbar-crest img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.4s ease;
+}
+
+.mbar-crest:hover img { opacity: 1; }
+
+.mbar-crest figcaption {
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.mbar-text {
+    font-size: 0.88rem;
+    line-height: 1.85;
+    color: #888;
+    font-style: italic;
+    margin: 0;
+}
+
+.mbar-sketches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    width: 280px;
+}
+
+.mbar-sketches figure {
+    overflow: hidden;
+}
+
+.mbar-sketches figure img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    filter: brightness(0.78) grayscale(15%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.mbar-sketches figure:hover img {
+    filter: brightness(1) grayscale(0%);
+    transform: scale(1.04);
+}
+
+.mbar-objects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.mbar-plaid img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 1px;
+    filter: brightness(0.85) saturate(0.85);
+    transition: filter 0.4s ease;
+}
+
+.mbar-plaid:hover img { filter: brightness(1) saturate(1); }
+
+.mbar-sword img {
+    width: 70px;
+    height: auto;
+    filter: brightness(0.9) contrast(1.05);
+    transition: filter 0.4s ease;
+}
+
+.mbar-sword:hover img { filter: brightness(1.05) contrast(1); }
+
+/* ══════════════════════════════════════════
    ARCHIVE
    ══════════════════════════════════════════ */
 .archive-section {
