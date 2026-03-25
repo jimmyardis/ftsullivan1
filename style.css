@@ -604,15 +604,15 @@ img { max-width: 100%; height: auto; display: block; }
 
 .reel-item {
     flex: 0 0 auto;
-    width: 32vw;
-    height: 56vh;
-    min-height: 320px;
+    width: 22vw;
+    height: 36vh;
+    min-height: 220px;
     scroll-snap-align: start;
     overflow: hidden;
 }
 
 .reel-wide {
-    width: 44vw;
+    width: 30vw;
 }
 
 .reel-item img {
