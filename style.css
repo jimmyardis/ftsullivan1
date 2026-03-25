@@ -572,6 +572,97 @@ img { max-width: 100%; height: auto; display: block; }
 .conversion-sketch:hover img { filter: brightness(1) grayscale(0%); }
 
 /* ══════════════════════════════════════════
+   INTERIOR SECTION & REEL
+   ══════════════════════════════════════════ */
+.interior-section {
+    background: var(--color-bg);
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+
+.interior-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.interior-reel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 4px;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none;
+    margin-top: 3rem;
+    padding-bottom: 4px;
+}
+
+.interior-reel::-webkit-scrollbar { display: none; }
+.interior-reel.grabbed { cursor: grabbing; }
+
+.reel-item {
+    flex: 0 0 auto;
+    width: 32vw;
+    height: 56vh;
+    min-height: 320px;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.reel-wide {
+    width: 44vw;
+}
+
+.reel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.88);
+    transition: transform 0.7s var(--ease-out), filter 0.5s ease;
+    pointer-events: none;
+}
+
+.reel-item:hover img {
+    transform: scale(1.04);
+    filter: brightness(1);
+}
+
+/* ══════════════════════════════════════════
+   MUGDOCK SECTION — compact
+   ══════════════════════════════════════════ */
+.mugdock-section {
+    background: var(--color-dark-bg);
+    padding: 5rem 0 4rem;
+}
+
+.mugdock-header {
+    margin-bottom: 0;
+    max-width: 680px;
+}
+
+.mugdock-header .chapter-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.mugdock-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--color-dark-text);
+    margin-bottom: 1.2rem;
+}
+
+.mugdock-header .mbar-text {
+    margin-bottom: 0;
+}
+
+/* ══════════════════════════════════════════
    MUGDOCK BAR — horizontal heritage strip
    ══════════════════════════════════════════ */
 .mugdock-bar {
